@@ -1,24 +1,292 @@
-# Logs
-logs
+# Cybersecurity .gitignore
+# Best practices: Exclude sensitive data, temporary files, and unnecessary artifacts
+# while keeping project-specific files safe for version control.
+
+# --------------------------------------
+# General Sensitive Files
+# --------------------------------------
+# Secrets, credentials, and sensitive configuration files
+*.key
+*.pem
+*.crt
+*.csr
+*.cer
+*.pfx
+*.jks
+*.der
+*.env
+*.env.local
+*.env.*.local
+.env
+.env.*
+secrets/
+credentials/
+config/secrets.yml
+config/credentials.yml
+*.secret
+*.private
+*.password
+*.token
+*.auth
+*.conf
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.gpg
+*.pgp
+pass*
+
+# API keys and tokens
+api_key*
+token*
+*.api
+*.credential
+
+# --------------------------------------
+# Logs and Temporary Files
+# --------------------------------------
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+logs/
+*.log.*
+*.tmp
+*.bak
+*.swp
+*~
+*.cache
+tmp/
+temp/
 
-node_modules
-dist
-dist-ssr
-*.local
+# --------------------------------------
+# Common Cybersecurity Tool Outputs
+# --------------------------------------
+# Nmap scan outputs
+*.nmap
+*.gnmap
+*.xml
+nmap_output/
+scan_results/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Metasploit
+msf4/
+.msf4/
+metasploit.log
+msfconsole_history
+
+# Burp Suite
+*.burp
+burp/
+*.burb
+
+# Nessus
+*.nessus
+nessus_report/
+*.nsr
+
+# Wireshark and packet captures
+*.pcap
+*.pcapng
+*.cap
+capture/
+pcaps/
+
+# SQLMap
+sqlmap/
+output/
+*.sqlmap
+
+# John the Ripper
+john/
+*.pot
+john.pot
+
+# Hashcat
+hashcat/
+*.hccapx
+*.hcstat
+hashcat.potfile
+hashcat.restore
+
+# Aircrack-ng
+*.cap
+*.ivs
+*.wpa
+aircrack/
+
+# OWASP ZAP
+zap/
+*.zap
+ZAP/
+
+# Hydra
+hydra.restore
+hydra/
+
+# Dirb/Dirbuster
+dirb/
+dirbuster/
+*.lst
+
+# Nikto
+nikto_output/
+*.nikto
+
+# Custom tool outputs
+results/
+output/
+scans/
+reports/
+*.out
+*.report
+*.txt
+
+# --------------------------------------
+# Common Development Artifacts
+# --------------------------------------
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.whl
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+build/
+out/
+
+# Ruby
+*.gem
+Gemfile.lock
+.bundle/
+vendor/bundle/
+
+# Go
+bin/
+pkg/
+*.exe
+*.exe~
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Gradle
+.gradle/
+build/
+
+# --------------------------------------
+# IDE and Editor Files
+# --------------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+*.iml
+*.ipr
+*.iws
+
+# --------------------------------------
+# OS-Specific Files
+# --------------------------------------
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+desktop.ini
+*.lnk
+
+# --------------------------------------
+# Virtual Environments
+# --------------------------------------
+venv/
+env/
+.virtualenv/
+*.venv/
+env.bak/
+venv.bak/
+
+# --------------------------------------
+# Database Files
+# --------------------------------------
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+*.bak
+
+# --------------------------------------
+# Docker and Containers
+# --------------------------------------
+docker-compose.yml
+docker-compose.override.yml
+*.dockerignore
+Dockerfile.local
+*.docker
+
+# --------------------------------------
+# Miscellaneous
+# --------------------------------------
+# Password lists and wordlists (if sensitive)
+passwords.txt
+wordlists/
+*.wordlist
+
+# Configuration backups
+*.backup
+*.bak
+*.old
+
+# Archives
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Memory dumps and core files
+*.dmp
+core
+*.core
+
+# --------------------------------------
+# Project-Specific Exclusions
+# --------------------------------------
+# Add any project-specific sensitive files or directories here
+# Example:
+# my_sensitive_config.conf
+# custom_output/
+
+# --------------------------------------
+# Exceptions (Files to Include)
+# --------------------------------------
+# Include specific configuration templates or examples
+!*.example
+!*.template
+!*.sample
+!*.conf.example
+!*.env.example
