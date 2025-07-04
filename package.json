@@ -1,0 +1,26 @@
+{
+  "name": "contractor-data-insights",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom/client": "18.2.0",
+    "framer-motion": "11.2.10",
+    "lucide-react": "0.395.0",
+    "zod": "3.23.8",
+    "react-hook-form": "7.51.5",
+    "react-dom": "^19.1.0",
+    "@google/genai": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  }
+}
